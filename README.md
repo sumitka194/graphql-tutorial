@@ -5,9 +5,9 @@
   # Install
     git clone https://github.com/sumit194/graphql-tutorial.git
   # Install dependencies
-	npm install
+    npm install
   # Start server
-	npm start
+    npm start
 ```
 
 ### Features
