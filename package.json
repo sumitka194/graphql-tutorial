@@ -1,0 +1,46 @@
+{
+  "name": "graphql-tutorial",
+  "version": "1.0.0",
+  "description": "GraphQL Express Node Server created for learning purpose",
+  "main": "server.js",
+  "scripts": {
+    "babel-node": "babel-node --presets=env",
+    "start": "nodemon --exec npm run babel-node -- server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sumit194/graphql-tutorial.git"
+  },
+  "keywords": [
+    "GraphQL",
+    "Express",
+    "Node",
+    "JWT"
+  ],
+  "author": "Sumit Kumar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sumit194/graphql-tutorial/issues"
+  },
+  "homepage": "https://github.com/sumit194/graphql-tutorial#readme",
+  "dependencies": {
+    "bcrypt": "^2.0.1",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "express-graphql": "^0.6.12",
+    "graphql": "^0.13.2",
+    "jsonwebtoken": "^8.2.1",
+    "loadash": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.12.0"
+  }
+}
