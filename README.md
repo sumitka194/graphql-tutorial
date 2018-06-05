@@ -8,16 +8,20 @@
     npm install
   # Start server
     npm start
+  # Generate API doc
+    npm run doc
 ```
 
 ### Features
 
 -  Static data for **Query** in **GraphQL**.
+-  **Login**, **SignUp** feature implemented.
+-  **JWT** is used to generate token after login.
+-  Schema for **Mutation** is created.
+-  Added script to generate the **Doc** for the API.
 
 ### RoadMap
 
-- Create a **LogIn**, **SignUp** system.
-- Use **JWT** for token verification.
-- Create schema for **Mutation** in **GraphQL**.
 - Create schema for **Multilevel** query in **GraphQL**.
 - Use **Interface** for Schema.
+- Create a better **Error Reporting** in **GraphQL**.

@@ -2,24 +2,18 @@ import { buildSchema } from 'graphql';
 
 const schema = buildSchema(`
   type Query {
-    state(id: Int!): State
-    vehicle(id: Int!): Vehicle
-    user(id: Int!): User
+    login(username: String!, password: String!): String!
+    getUserDetails: User!
   }
-  type State {
-    id: Int
-    name: String
-  }
-  type Vehicle {
-    id: Int
-    name: String
+  type Mutation {
+    signup(username: String!, password: String!): String!
+    updateUser(username: String, password: String): User!
+    deleteUser: String!
   }
   type User {
     id: Int
-    name: String
-    major: String
-    state: State
-    vehicle: Vehicle
+    username: String!
+    password: String!
   }
 `);
 

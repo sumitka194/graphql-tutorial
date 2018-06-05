@@ -3,10 +3,15 @@
   "version": "1.0.0",
   "description": "GraphQL Express Node Server created for learning purpose",
   "main": "server.js",
+  "graphdoc": {
+    "endpoint": "http://localhost:4040/api",
+    "output": "./doc/schema"
+  },
   "scripts": {
     "babel-node": "babel-node --presets=env",
     "start": "nodemon --exec npm run babel-node -- server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "doc": "graphdoc -f"
   },
   "repository": {
     "type": "git",
@@ -25,6 +30,7 @@
   },
   "homepage": "https://github.com/sumit194/graphql-tutorial#readme",
   "dependencies": {
+    "@2fd/graphdoc": "^2.4.0",
     "bcrypt": "^2.0.1",
     "body-parser": "^1.18.3",
     "cors": "^2.8.4",
@@ -32,7 +38,7 @@
     "express-graphql": "^0.6.12",
     "graphql": "^0.13.2",
     "jsonwebtoken": "^8.2.1",
-    "loadash": "^1.0.0"
+    "lodash": "^4.17.10"
   },
   "devDependencies": {
     "babel": "^6.23.0",

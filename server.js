@@ -4,6 +4,7 @@ import cors from 'cors';
 import graphqlHTTP from 'express-graphql';
 import schema from './source/schema';
 import root from './source/resolver';
+import { authMiddleware } from './source/util/helper';
 
 const app = express();
 
@@ -13,11 +14,16 @@ app.use(bodyParser.urlencoded({
   extended: true,
 }));
 
-app.use('/api', graphqlHTTP({
+app.use(authMiddleware);
+
+app.use('/api', graphqlHTTP(request => ({
   schema,
+  context: {
+    request,
+  },
   rootValue: root,
   graphiql: true,
-}));
+})));
 
 app.listen(4040, () => {
   console.log('#####################################');

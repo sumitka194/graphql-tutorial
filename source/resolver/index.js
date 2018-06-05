@@ -1,17 +1,12 @@
-import store from '../data';
-
-const { user, vehicle, state } = store;
-
-const getUser = ({ id }) => user.filter(data => data.id === id)[0];
-
-const getState = ({ id }) => state.filter(data => data.id === id)[0];
-
-const getVehcile = ({ id }) => vehicle.filter(data => data.id === id)[0];
+import { login, getUserDetails } from './Query';
+import { signup, updateUser, deleteUser } from './Mutation';
 
 const root = {
-  user: getUser,
-  sate: getState,
-  vehcile: getVehcile,
+  login,
+  getUserDetails,
+  signup,
+  updateUser,
+  deleteUser,
 };
 
 export default root;
